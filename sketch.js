@@ -28,7 +28,8 @@ function setup() {
   //crie um sprite ground (solo)
   ground = createSprite(300, 180, 600, 20);
   ground.addImage(groundImage);
-  ground.velocityX= -4;
+  ground.x = ground.width / 2;
+  
   invisibleGround=createSprite(300,190,600,10);
   invisibleGround.visible=false;  
   
@@ -36,7 +37,7 @@ function setup() {
 
 function draw() {
   background("darkgray");
-
+ground.velocityX= -4;
 
   //pular quando a tecla espaço for pressionada
   if (keyDown("space") && trex.y >= 160) {
